@@ -1,0 +1,225 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #FF9F66; /* Set background to #FF9F66 */
+    background-image: 
+        linear-gradient(#002379 1px, transparent 1px), 
+        linear-gradient(to right, #002379 1px, #FF9F66 1px);
+    background-size: 20px 20px; /* Adjust the grid size as needed */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.page-container {
+    background-color: #FFFAE6; /* Set background to #FFFAE6 for the container */
+    border: 3px solid black; /* Black border */
+    border-radius: 15px; /* Curved corners */
+    padding: 20px; /* Padding from the edges */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    max-width: 90%; /* Ensure the container does not exceed the viewport width */
+    max-height: 90%; /* Ensure the container does not exceed the viewport height */
+}
+
+#array-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 300px;
+    padding-top: 50px; /* Added padding */
+    position: relative; /* Add position relative to the container for absolute positioning of labels */
+}
+
+.bar {
+    position: relative;
+    margin: 0 4px; /* Added space between bars */
+    flex-grow: 1;
+    background: #FF5F00; /* Change bar color to #FF5F00 */
+    border: 3px solid #000; /* Add border similar to button */
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px; /* Reduced box-shadow */
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: top 0.2s, left 0.2s, box-shadow 0.2s;
+}
+
+.bar:active {
+    box-shadow: 0px 0px 0px 0px; /* Remove shadow on active */
+    top: 5px;
+    left: 5px; /* Move bar slightly on active */
+}
+
+.bar-label {
+    position: absolute;
+    bottom: -30px; /* Increased space between bar and label */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+    font-weight: bold; /* Make numbers bold */
+    color: #002379; /* Replace black color with #002379 */
+}
+
+.controls {
+    margin-top: 40px; /* Increased margin-top for more space between bars and buttons */
+    display: flex;
+    flex-wrap: wrap; /* Allows controls to wrap to the next line if needed */
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    color: #002379; /* Replace black color with #002379 */
+    margin: 0 10px; /* Add margin for spacing */
+    font-weight: bold; /* Make the label bold */
+}
+
+button, select, input[type="range"], input[type="number"] {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #002379; /* Replace black color with #002379 */
+    border: none; /* Remove default border */
+    font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+}
+
+input[type="range"] {
+    width: 150px;
+    background: #002379; /* Change speed slider color to #002379 */
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #FF5F00; /* Change thumb color to match bars */
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #FF5F00; /* Change thumb color to match bars */
+    cursor: pointer;
+}
+
+input[type="text"] {
+    background-color: white; /* Keep input box white */
+    border: 1px solid #002379; /* Add border color */
+}
+
+select {
+    background-color: white; /* Keep select box white */
+    border: 1px solid #002379; /* Add border color */
+    font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman for dropdown */
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    margin: 0 10px; /* Add margin for spacing */
+    padding: 10px 0; /* Add padding between buttons and speed control */
+}
+
+/* Button Styles */
+.button-1 {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+}
+
+.button-1-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+        transform
+        600ms
+        cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-1-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        hsl(218deg, 100%, 4%)0%,
+        hsl(217deg, 100%, 35%) 8%,
+        hsl(217deg, 100%, 35%) 92%,
+        hsl(218deg, 100%, 4%) 100%
+    );
+}
+
+.button-1-front {
+    display: block;
+    position: relative;
+    padding: 8px 20px; /* Reduced padding for smaller button size */
+    border-radius: 12px;
+    font-size: 0.9rem; /* Reduced font size */
+    color: white;
+    background: #01298f; /* Change button background to #002379 */
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+    .button-1-front {
+        font-size: 1rem; /* Slightly increase font size for larger screens */
+        padding: 10px 30px; /* Slightly increase padding for larger screens */
+    }
+}
+
+.button-1:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.button-1:hover .button-1-front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-1:active .button-1-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button-1:hover .button-1-shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-1:active .button-1-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button-1:focus:not(:focus-visible) {
+    outline: none;
+}

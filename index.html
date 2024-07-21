@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="container">
+            <div class="array-container" id="array-container"></div>
+            <div class="controls">
+                <input type="text" id="user-input" placeholder="Enter numbers">
+                <button id="submit-btn" class="button-1">
+                  <span class="button-1-shadow"></span>
+                  <span class="button-1-edge"></span>
+                  <span class="button-1-front text">Submit</span>
+                </button>
+                <button id="randomize-btn" class="button-1">
+                  <span class="button-1-shadow"></span>
+                  <span class="button-1-edge"></span>
+                  <span class="button-1-front text">Randomize Array</span>
+                </button>
+                <button id="start-btn" class="button-1">
+                  <span class="button-1-shadow"></span>
+                  <span class="button-1-edge"></span>
+                  <span class="button-1-front text">Start Sorting</span>
+                </button>
+                <button id="stop-btn" class="button-1">
+                  <span class="button-1-shadow"></span>
+                  <span class="button-1-edge"></span>
+                  <span class="button-1-front text">Stop Sorting</span>
+                </button>
+                <label for="algorithm-select" class="label">Algorithm</label>
+                <select id="algorithm-select">
+                    <option value="bubble-sort">Bubble Sort</option>
+                    <option value="selection-sort">Selection Sort</option>
+                    <option value="insertion-sort">Insertion Sort</option>
+                    <option value="merge-sort">Merge Sort</option>
+                    <option value="quick-sort">Quick Sort</option>
+                </select>
+                <div class="speed-control">
+                    <label for="speed-slider" class="label">SPEED</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="speed-slider">
+                </div>
+            </div>
+            <audio id="swap-sound" src="swap.mp3"></audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
