@@ -1,10 +1,6 @@
 # Sorting Vizualizer
 Sorting Visualizer is a web tool that helps users understand sorting algorithms visually. Input or generate random arrays, choose an algorithm (Bubble, Selection, Insertion, Merge, Quick Sort), and watch the sorting process. Features adjustable speed and sound effects for swaps. Ideal for students, educators, and anyone learning sorting algorithms.
 
-# Sorting Visualizer
-
-Sorting Visualizer is a web application that visualizes different sorting algorithms. Users can input their own array of numbers or generate a random array, and then see how various sorting algorithms sort the array step-by-step.
-
 ## Table of Contents
 
 - [Features](#features)
